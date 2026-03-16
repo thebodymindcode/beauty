@@ -27,9 +27,9 @@
         /* NAV */
         nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:all .4s ease}
         nav.scrolled{background:rgba(253,248,248,0.96);backdrop-filter:blur(16px);box-shadow:0 2px 30px rgba(201,86,106,0.05);padding:14px 0}
-        nav .container-wide{display:flex;justify-content:space-between;align-items:center}
-        .logo{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text);text-decoration:none}
-        .nav-cta{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);text-decoration:none;padding:11px 26px;border:1px solid var(--rose);transition:all .3s;font-weight:600}
+        nav .container-wide{display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .logo{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text);text-decoration:none;white-space:nowrap}
+        .nav-cta{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);text-decoration:none;padding:11px 22px;border:1px solid var(--rose);transition:all .3s;font-weight:600;white-space:nowrap;flex-shrink:0}
         .nav-cta:hover{background:var(--rose);color:#fff}
 
         /* HERO */
@@ -255,19 +255,143 @@
         .reveal.visible{opacity:1;transform:translateY(0)}
         .reveal-d1{transition-delay:.12s}.reveal-d2{transition-delay:.24s}
 
+        /* ── TABLET ── */
         @media(max-width:900px){
-            .intro-grid,.audience-grid{grid-template-columns:1fr}
-            .shields-grid{grid-template-columns:1fr;gap:14px}
+            .container,.container-wide{padding:0 20px}
+            .intro-grid,.audience-grid{grid-template-columns:1fr;gap:32px}
+            .shields-grid{grid-template-columns:1fr;gap:16px}
             .topics-grid{grid-template-columns:1fr}
-            .shift-items{grid-template-columns:1fr;max-width:340px}
-            .host-layout{grid-template-columns:1fr;gap:28px}.host-photo{width:200px;height:260px}
+            .shift-items{grid-template-columns:1fr;max-width:100%;margin:0}
+            .host-layout{grid-template-columns:1fr;gap:28px;text-align:center}
+            .host-photo{width:200px;height:260px;margin:0 auto}
+            .host-stats{justify-content:center}
             .principle-block,.principle-block:nth-child(even){grid-template-columns:1fr}
             .p-visual{display:none}
             .cd-evt{display:none}
+            .cd-block{padding:0 18px}
         }
+
+        /* ── MOBILE ── */
         @media(max-width:600px){
-            .section{padding:68px 0}.hero{padding:100px 20px 72px}.pricing-card{padding:32px 22px}
-            nav .container-wide{padding:0 16px}.nav-cta{padding:9px 18px;font-size:.6rem}
+            /* NAV: logo left, button right, never overflow */
+            nav{padding:14px 0}
+            nav.scrolled{padding:10px 0}
+            nav .container-wide{padding:0 16px;gap:8px}
+            .logo{font-size:.75rem;letter-spacing:.06em;white-space:nowrap}
+            .nav-cta{
+                padding:8px 14px;
+                font-size:.56rem;
+                letter-spacing:.08em;
+                white-space:nowrap;
+                flex-shrink:0;
+            }
+
+            /* HERO */
+            .hero{padding:100px 20px 64px;min-height:100svh}
+            .hero-breath{width:200px;height:200px}
+            .hero-label{font-size:.55rem;letter-spacing:.18em;padding:8px 16px;margin-bottom:16px}
+            .hero-date{font-size:.6rem;letter-spacing:.1em;gap:8px;margin-bottom:32px;flex-wrap:wrap;justify-content:center}
+            .hero-title{font-size:clamp(2.8rem,11vw,4.2rem);letter-spacing:-.03em}
+            .hero-sub{font-size:1.1rem;margin-top:18px}
+            .hero-sub3{font-size:.88rem;margin-top:14px}
+            .hero-meta{gap:12px;margin-top:24px;flex-direction:column;align-items:center}
+            .hero-meta-item{font-size:.72rem}
+            .hero-cta-wrap{margin-top:32px;width:100%}
+            .hero-cta-wrap .btn-primary{width:100%;text-align:center;display:block;padding:16px 20px;font-size:.65rem}
+            .hero-cta-note{font-size:.68rem}
+
+            /* COUNTDOWN */
+            .countdown-bar{padding:18px 0}
+            .cd-block{padding:0 14px}
+            .cd-num{font-size:1.8rem}
+            .cd-lbl{font-size:.48rem}
+            .cd-block+.cd-block::before{font-size:1.2rem}
+
+            /* SECTIONS */
+            .section{padding:56px 0}
+            .container,.container-wide{padding:0 20px}
+            .section-title{font-size:clamp(1.8rem,7vw,2.4rem)}
+            .section-label{font-size:.55rem;letter-spacing:.2em}
+
+            /* INTRO */
+            .intro-grid{gap:28px}
+            .intro-text{font-size:.9rem}
+
+            /* PRINCIPLES */
+            .principle-block{padding:36px 0}
+            .principle-title{font-size:1.4rem}
+            .principle-text{font-size:.88rem}
+            .principle-conclusion{padding:16px 18px;font-size:1rem}
+
+            /* SHIELDS */
+            .shield-svg-wrap{aspect-ratio:auto;height:220px}
+            .shield-text{padding:20px 20px 16px}
+            .shield-name{font-size:1.5rem}
+            .shield-desc{font-size:.84rem}
+            .shield-body-text{font-size:.82rem}
+            .shield-tag{margin:0 20px 20px;font-size:.88rem}
+            .shields-quote{font-size:1.15rem;margin-bottom:36px}
+            .shields-conclusion{font-size:1rem}
+
+            /* SHIFT */
+            .shift-items{gap:12px}
+            .shift-item{padding:28px 18px}
+            .shift-new{font-size:1.05rem}
+
+            /* TOPICS */
+            .topics-grid{gap:10px}
+            .topic-card{padding:20px 18px}
+            .topic-txt{font-size:.84rem}
+
+            /* PROCESS */
+            .process-step{grid-template-columns:44px 1fr;gap:16px;padding:26px 0}
+            .step-num{font-size:2.2rem}
+            .step-title{font-size:1.1rem}
+            .step-desc{font-size:.84rem}
+            .step-badge{font-size:.52rem;padding:3px 8px}
+
+            /* AUDIENCE */
+            .audience-card{padding:24px 20px}
+            .audience-card li{font-size:.84rem}
+
+            /* HOST */
+            .host-layout{text-align:center}
+            .host-photo{width:180px;height:230px;margin:0 auto}
+            .host-stats{flex-direction:row;flex-wrap:wrap;gap:24px;justify-content:center}
+            .host-stat-val{font-size:1.8rem}
+            .host-info h3{font-size:1.6rem}
+            .host-info p{font-size:.86rem}
+
+            /* PRICING */
+            .pricing-card{padding:36px 20px;margin:32px 0 0}
+            .pricing-event{font-size:1.5rem}
+            .pricing-amount{font-size:2.4rem}
+            .pricing-when{padding:14px 16px}
+            .pricing-when-date{font-size:1.25rem}
+            .pricing-bonus{font-size:.8rem}
+            .pricing-bonuses-title{font-size:.54rem}
+            .btn-primary{padding:16px 24px;font-size:.62rem}
+
+            /* MID CTA */
+            .mid-cta{padding:44px 0}
+            .mid-cta p{font-size:1rem}
+            .mid-cta .btn-primary{width:100%;display:block;text-align:center}
+
+            /* FAQ */
+            .faq-wrap{padding:0}
+            details.faq summary{padding:16px 18px;font-size:.84rem}
+            .faq-body{padding:0 18px 18px;font-size:.82rem}
+
+            /* FINAL */
+            .final-cta{padding:64px 0}
+            .final-cta h2{font-size:clamp(1.8rem,8vw,2.4rem)}
+            .final-cta .btn-primary{width:100%;display:block;text-align:center}
+            .final-ps{font-size:.78rem}
+
+            /* FOOTER */
+            footer{padding:40px 0}
+            .footer-links{flex-direction:column;gap:10px}
+            .footer-legal{font-size:.6rem}
         }
     
 /* ── GRID ── */
@@ -972,7 +1096,7 @@
             <div class="pricing-line"></div>
             <div class="pricing-amount">1&nbsp;490 <span>₽</span></div>
             <div class="pricing-note">Одна оплата, запись встречи остаётся навсегда</div>
-            <a href="https://payform.ru/" class="btn-primary" style="width:100%;text-align:center;display:block">Зарегистрироваться →</a>
+            <a href="https://payform.ru/" class="btn-primary" style="width:100%;text-align:center;display:block;box-sizing:border-box">Зарегистрироваться →</a>
             <div class="pricing-bonuses">
                 <div class="pricing-bonuses-title">Что входит</div>
                 <div class="pricing-bonus"><span class="pricing-bonus-icon">✦</span>Живая встреча 21 марта, с возможностью задать вопрос вживую</div>
