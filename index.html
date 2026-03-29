@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Красота без оправданий | 22 марта | Архитектура сознания</title>
+    <title>Красота без оправданий | Запись встречи | Архитектура сознания</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
             --blush:#F2C4CB;
             --text:#1E1214;--text-body:#3A2428;--text-muted:#6A4A50;--text-dim:#9A8083;--border:rgba(201,86,106,0.10);
         }
-        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-        body{font-family:'DM Sans',-apple-system,sans-serif;background:var(--bg);color:var(--text-body);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}
+        body{font-family:'DM Sans',-apple-system,sans-serif;background:var(--bg);color:var(--text-body);line-height:1.75;overflow-x:hidden;word-wrap:break-word;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
         h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.2;color:var(--text)}
         body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:0.016;pointer-events:none;z-index:10000}
 
@@ -313,20 +313,25 @@
             nav{padding:14px 0}
             nav.scrolled{padding:10px 0}
             nav .container-wide{padding:0 16px;gap:8px}
+            /* GLOBAL MOBILE PROTECTION */
+            *{max-width:100%!important;box-sizing:border-box!important}
+            img,svg,video{max-width:100%!important;height:auto!important}
+            .container,.container-wide{overflow:hidden!important}
             .logo{font-size:.75rem;letter-spacing:.06em;white-space:nowrap}
             .nav-cta{
-                padding:8px 14px;
-                font-size:.56rem;
-                letter-spacing:.08em;
+                padding:7px 12px;
+                font-size:.52rem;
+                letter-spacing:.06em;
                 white-space:nowrap;
                 flex-shrink:0;
             }
+            /* Hero - reduce top space */
+            .hero{padding:80px 16px 48px!important;min-height:auto!important;justify-content:flex-start!important}
 
             .choice-grid{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}
             .sticky-mob{display:block}
             [style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important}
             /* HERO */
-            .hero{padding:100px 20px 64px;min-height:100svh}
             .hero-breath{width:200px;height:200px}
             .hero-label{font-size:.55rem;letter-spacing:.18em;padding:8px 16px;margin-bottom:16px}
             .hero-date{font-size:.6rem;letter-spacing:.1em;gap:8px;margin-bottom:32px;flex-wrap:wrap;justify-content:center}
@@ -524,47 +529,36 @@
 <nav id="nav">
     <div class="container-wide">
         <a href="#" class="logo">Архитектура сознания</a>
-        <a href="#pricing" class="nav-cta">Зарегистрироваться</a>
+        <a href="#pricing" class="nav-cta">Получить запись</a>
     </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
     <div class="hero-breath"></div>
-    <div class="hero-label">Живая Zoom-встреча</div>
+    <div class="hero-label">Запись встречи + конспект · Доступ навсегда</div>
     <div class="hero-date">
-        <span>22 марта</span><div class="hero-date-dot"></div>
-        <span>Суббота</span><div class="hero-date-dot"></div>
-        <span>14:00 мск</span><div class="hero-date-dot"></div>
-        <span>90 минут</span>
+        <span>90 минут</span><div class="hero-date-dot"></div>
+        <span>Запись + практика</span><div class="hero-date-dot"></div>
+        <span>Доступ навсегда</span>
     </div>
     <h1 class="hero-title">Красота<em>без оправданий</em></h1>
     <p class="hero-sub">Не про то, как полюбить себя. Про то, где именно было принято решение что это не для вас.</p>
     <p class="hero-sub3">Мы ровно такие, какими себя видим.<br>Пора увидеть по-другому.</p>
     <div class="hero-meta">
-        <div class="hero-meta-item"><div class="hero-meta-dot"></div>Живая встреча</div>
-        <div class="hero-meta-item"><div class="hero-meta-dot"></div>Практика прямо в эфире</div>
+        <div class="hero-meta-item"><div class="hero-meta-dot"></div>90 минут записи</div>
+        <div class="hero-meta-item"><div class="hero-meta-dot"></div>Практика в записи</div>
         <div class="hero-meta-item"><div class="hero-meta-dot"></div>Запись навсегда</div>
     </div>
     <div class="hero-cta-wrap">
-        <a href="#pricing" class="btn-primary">Зарегистрироваться →</a>
-        <span class="hero-cta-note">1 490 ₽ · Zoom · 22 марта</span>
+        <a href="#pricing" class="btn-primary">Получить запись →</a>
+        <span class="hero-cta-note">1 490 ₽ · Запись + конспект · Доступ навсегда</span>
     </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- COUNTDOWN -->
-<div class="countdown-bar">
-    <div class="container-wide">
-        <div class="cd-inner">
-            <div class="cd-evt">До начала встречи</div>
-            <div class="cd-block"><span class="cd-num" id="cd-d">00</span><span class="cd-lbl">дней</span></div>
-            <div class="cd-block"><span class="cd-num" id="cd-h">00</span><span class="cd-lbl">часов</span></div>
-            <div class="cd-block"><span class="cd-num" id="cd-m">00</span><span class="cd-lbl">минут</span></div>
-            <div class="cd-block"><span class="cd-num" id="cd-s">00</span><span class="cd-lbl">секунд</span></div>
-        </div>
-    </div>
+<!-- COUNTDOWN REMOVED - event passed -->
 </div>
 
 <!-- INTRO: MIRROR OF PAIN -->
@@ -1076,8 +1070,8 @@
         <div class="process-steps">
             <div class="process-step reveal"><div class="step-num">01</div><div><div class="step-badge">0–10 мин</div><h3 class="step-title">Крючок</h3><div class="step-desc">Встреча открывается не приветствием, а вопросом. Без подготовки.</div></div></div>
             <div class="process-step reveal"><div class="step-num">02</div><div><div class="step-badge">10–30 мин</div><h3 class="step-title">Три механизма</h3><div class="step-desc">Нейробиология красоты. Три механизма. Три стратегии защиты. Разбираем как устроена петля.</div></div></div>
-            <div class="process-step reveal"><div class="step-num">03</div><div><div class="step-badge">30–60 мин</div><h3 class="step-title">Живая практика</h3><div class="step-desc">Две техники работы с телом прямо в эфире. Не теория. Практика.</div></div></div>
-            <div class="process-step reveal"><div class="step-num">04</div><div><div class="step-badge">60–90 мин</div><h3 class="step-title">Интеграция и вопросы вживую</h3><div class="step-desc">Инструмент «2 минуты утром». Разбор вопросов вживую. Закрываем встречу с состоянием.</div></div></div>
+            <div class="process-step reveal"><div class="step-num">03</div><div><div class="step-badge">30–60 мин</div><h3 class="step-title">Практика</h3><div class="step-desc">Две техники работы с телом. Не теория. Практика, которую вы повторяете с записью.</div></div></div>
+            <div class="process-step reveal"><div class="step-num">04</div><div><div class="step-badge">60–90 мин</div><h3 class="step-title">Интеграция</h3><div class="step-desc">Инструмент «2 минуты утром». Закрываем встречу с состоянием.</div></div></div>
         </div>
     </div>
 </section>
@@ -1088,7 +1082,7 @@
 <div class="mid-cta">
     <div class="container">
         <p>Где-то внутри живёт та часть, которая хочет просто расцвести.</p>
-        <a href="#pricing" class="btn-primary">Зарегистрироваться на 22 марта →</a>
+        <a href="#pricing" class="btn-primary">Получить запись →</a>
     </div>
 </div>
 
@@ -1097,7 +1091,7 @@
     <div class="container">
         <div class="reveal" style="text-align:center">
             <div class="section-label">Для кого</div>
-            <h2 class="section-title">Эта встреча, для вас</h2>
+            <h2 class="section-title">Эта запись для вас</h2>
         </div>
         <div class="audience-grid">
             <div class="audience-card yes reveal"><h3>Приходи, если:</h3><ul>
@@ -1175,26 +1169,26 @@
 <section class="section pricing-section" id="pricing">
     <div class="container">
         <div class="reveal">
-            <div class="section-label">Регистрация</div>
+            <div class="section-label">Получить запись</div>
             <h2 class="section-title">Красота без оправданий</h2>
-            <p class="section-sub center">Живая встреча. 22 марта.</p>
+            <p class="section-sub center">Запись встречи · Доступ навсегда</p>
         </div>
         <div class="pricing-card reveal">
-            <div class="pricing-badge">Живая Zoom-встреча</div>
+            <div class="pricing-badge">Запись встречи + конспект</div>
             <div class="pricing-event">Красота без оправданий</div>
-            <div class="pricing-format">Живая встреча · 90 минут · Запись навсегда</div>
+            <div class="pricing-format">90 минут записи + конспект + практики · Доступ навсегда</div>
             <div class="pricing-when">
-                <div class="pricing-when-date">22 марта, воскресенье</div>
-                <div class="pricing-when-time">14:00 по Москве · Zoom · Камера не обязательна</div>
+                <div class="pricing-when-date">Смотрите в удобное время</div>
+                <div class="pricing-when-time">Мгновенный доступ после оплаты</div>
             </div>
             <div class="pricing-line"></div>
             <div class="pricing-amount">1&nbsp;490 <span>₽</span></div>
-            <div class="pricing-note">Одна оплата, запись встречи остаётся навсегда</div>
-            <a href="https://payform.ru/rmaY81X/" class="btn-primary" style="width:100%;text-align:center;display:block;box-sizing:border-box">Зарегистрироваться →</a>
+            <div class="pricing-note">Одна оплата · Доступ навсегда</div>
+            <a href="https://payform.ru/rmaY81X/" class="btn-primary" style="width:100%;text-align:center;display:block;box-sizing:border-box">Получить запись →</a>
             <div class="pricing-bonuses">
                 <div class="pricing-bonuses-title">Что входит</div>
-                <div class="pricing-bonus"><span class="pricing-bonus-icon">✦</span>Живая встреча 22 марта, с возможностью задать вопрос вживую</div>
-                <div class="pricing-bonus"><span class="pricing-bonus-icon">✦</span>Запись встречи, которая останется у вас навсегда</div>
+                <div class="pricing-bonus"><span class="pricing-bonus-icon">✦</span>90-минутная запись встречи «Красота без оправданий»</div>
+                <div class="pricing-bonus"><span class="pricing-bonus-icon">✦</span>Доступ навсегда: смотрите когда удобно, повторяйте практику</div>
                 <div class="pricing-bonus"><span class="pricing-bonus-icon">✦</span>Конспект: три механизма + три стратегии + обе практики пошагово</div>
                 <div class="pricing-bonus"><span class="pricing-bonus-icon">✦</span>Карточка «2 минуты утром» для ежедневной практики</div>
             </div>
@@ -1213,9 +1207,9 @@
         </div>
         <div class="faq-list faq-wrap">
             <details class="faq reveal"><summary>Это та же тема что «полюби себя»?</summary><div class="faq-body">Нет. «Полюби себя» работает на уровне мыслей. Здесь мы идём к конкретному решению которое хранится в теле. Одно ощущение. картина меняется.</div></details>
-            <details class="faq reveal"><summary>Чем живая встреча отличается от записи?</summary><div class="faq-body">На живой встрече можно задать вопрос вживую. Дарья читает чат и комментирует ответы участниц в реальном времени. Плюс, запись остаётся в любом случае.</div></details>
-            <details class="faq reveal"><summary>Нужно ли включать камеру?</summary><div class="faq-body">Нет. Камера не обязательна. Ссылка на Zoom и все материалы придут после оплаты.</div></details>
-            <details class="faq reveal"><summary>Что если не смогу прийти 22 марта?</summary><div class="faq-body">Запись встречи останется у вас навсегда. Можно посмотреть в удобное время и повторить практику самостоятельно.</div></details>
+            <details class="faq reveal"><summary>Это запись? Не живая встреча?</summary><div class="faq-body">Да, встреча уже прошла. Вы получаете полную 90-минутную запись + конспект + карточку практики. Всё, что было на встрече, доступно в записи. Смотрите в удобное время.</div></details>
+            <details class="faq reveal"><summary>Как получу запись?</summary><div class="faq-body">Сразу после оплаты. Ссылка на запись и все материалы придут автоматически.</div></details>
+            <details class="faq reveal"><summary>Можно ли пересматривать?</summary><div class="faq-body">Да, доступ навсегда. Многие пересматривают практику несколько раз — каждый раз замечают новое.</div></details>
             <details class="faq reveal"><summary>Я уже много работала с психологом. Будет что-то новое?</summary><div class="faq-body">Вероятно, да. Психологи обычно работают с историей и убеждениями. Здесь, с телом, там где решение физически хранится. Многие участницы говорят что за 90 минут сдвинулось то, чего не получалось годами в разговорной терапии.</div></details>
             <details class="faq reveal"><summary>Это про похудение / уход за кожей?</summary><div class="faq-body">Нет. Это про то, как человек видит себя. почему. Красота как состояние, не как результат диеты или крема.</div></details>
         </div>
@@ -1229,8 +1223,8 @@
     <div class="container">
         <div class="reveal">
             <h2>Красота никуда<br>не уходила.<br><span class="rose-text">Пора вернуть её.</span></h2>
-            <div style="margin-top:36px"><a href="#pricing" class="btn-primary">Зарегистрироваться на 22 марта →</a></div>
-            <p class="final-ps">Живая встреча · 22 марта · 14:00 · 1 490 ₽<br>Конспект + практики + запись навсегда</p>
+            <div style="margin-top:36px"><a href="#pricing" class="btn-primary">Получить запись →</a></div>
+            <p class="final-ps">Запись встречи · 90 минут · 1 490 ₽<br>Конспект + практики + доступ навсегда</p>
         </div>
     </div>
 </section>
@@ -1311,8 +1305,8 @@ function updateResult(){
     if(c===0){r.classList.remove('show');return}
     r.classList.add('show');
     if(c<=2){t.textContent='Щит начал формироваться';x.innerHTML='Решение «красота — не моё» уже работает, но ещё не стало тотальным. <strong style="color:var(--rose)">Сейчас — лучший момент его отменить.</strong>';}
-    else if(c<=4){t.textContent='Программа активна — щит работает';x.innerHTML='Тело автоматически прячет вас: плечи, дыхание, взгляд. <strong style="color:var(--rose)">Именно на этом уровне одна встреча даёт самый мощный сдвиг.</strong> <a href="#pricing" style="color:var(--rose);font-weight:600">Зарегистрироваться ↓</a>';}
-    else{t.textContent='Решение тотальное — тело не разрешает быть красивой';x.innerHTML='Вы отметили '+c+' из 7. <strong style="color:var(--rose)">Это не вы — это программа из детства. И её можно отменить. В теле, не в голове. За 90 минут.</strong> <a href="#pricing" style="color:var(--rose);font-weight:600">Зарегистрироваться на 22 марта ↓</a>';}
+    else if(c<=4){t.textContent='Программа активна — щит работает';x.innerHTML='Тело автоматически прячет вас: плечи, дыхание, взгляд. <strong style="color:var(--rose)">Именно на этом уровне одна запись даёт самый мощный сдвиг.</strong> <a href="#pricing" style="color:var(--rose);font-weight:600">Получить запись ↓</a>';}
+    else{t.textContent='Решение тотальное — тело не разрешает быть красивой';x.innerHTML='Вы отметили '+c+' из 7. <strong style="color:var(--rose)">Это не вы — это программа из детства. И её можно отменить. В теле, не в голове. За 90 минут.</strong> <a href="#pricing" style="color:var(--rose);font-weight:600">Получить запись ↓</a>';}
 }
 
 // Sticky mobile
@@ -1325,6 +1319,6 @@ if(sm)window.addEventListener('scroll',function(){
 
 </script>
 
-<div class="sticky-mob" id="stickyMob"><a href="#pricing">Зарегистрироваться · 22 марта · 1 490 ₽</a></div>
+<div class="sticky-mob" id="stickyMob" style="top:auto;bottom:0;transform:translateY(100%)"><a href="#pricing">Получить запись · 1 490 ₽</a></div>
 </body>
 </html>
